@@ -1,6 +1,6 @@
 # 🧠 AI Resume Screening System
 
-An AI-assisted resume screening and candidate ranking system built with **Python, Natural Language Processing (NLP), Machine Learning techniques, and Streamlit**.
+An AI-assisted resume screening and candidate ranking system built using **Python, Natural Language Processing (NLP), Machine Learning techniques, and Streamlit**.
 
 The application analyzes candidate resumes against a job description, extracts relevant skills, calculates text similarity using **TF-IDF and cosine similarity**, and generates a ranked list of candidates through an interactive web dashboard.
 
@@ -30,109 +30,133 @@ The application analyzes candidate resumes against a job description, extracts r
 ## 🖥️ Application Workflow
 
 ```text
-                ┌──────────────────────┐
-                │   Job Description    │
-                └──────────┬───────────┘
-                           │
-                           ▼
-                ┌──────────────────────┐
-                │  Candidate Resumes   │
-                └──────────┬───────────┘
-                           │
-                           ▼
-                ┌──────────────────────┐
-                │   Text Extraction    │
-                └──────────┬───────────┘
-                           │
-                           ▼
-                ┌──────────────────────┐
-                │   Skill Extraction   │
-                └──────────┬───────────┘
-                           │
-                           ▼
-                ┌──────────────────────┐
-                │ TF-IDF Vectorization │
-                └──────────┬───────────┘
-                           │
-                           ▼
-                ┌──────────────────────┐
-                │  Cosine Similarity   │
-                └──────────┬───────────┘
-                           │
-                           ▼
-                ┌──────────────────────┐
-                │  Skill Match Score   │
-                └──────────┬───────────┘
-                           │
-                           ▼
-                ┌──────────────────────┐
-                │  Candidate Ranking   │
-                └──────────────────────┘
+Job Description
+       ↓
+Candidate Resumes
+       ↓
+Text Extraction
+       ↓
+Skill Extraction
+       ↓
+TF-IDF Vectorization
+       ↓
+Cosine Similarity
+       ↓
+Skill Match Score
+       ↓
+Candidate Ranking
+```
 
-🧠 How It Works
-1. Resume Text Extraction
-The system extracts text from uploaded resumes using dedicated extraction modules.
-Supported formats include:
+---
+
+## 🧠 How It Works
+
+### 1. Resume Text Extraction
+
+The system accepts candidate resumes in different file formats:
+
 - PDF
 - DOCX
 - TXT
-The extracted content is passed to the screening pipeline for further processing.
-2. Skill Extraction
-The application maintains a skills taxonomy containing technical and professional skills.
+
+The uploaded resume content is extracted and converted into text for further processing.
+
+### 2. Skill Extraction
+
+The application contains a skills taxonomy containing technical and professional skills.
+
 The system identifies skills appearing in:
+
 - Job descriptions
 - Candidate resumes
+
 It then calculates the candidate's skill match and identifies:
+
 - Matched Skills
 - Missing Skills
-3. TF-IDF Text Representation
-The job description and candidate resumes are converted into numerical representations using TF-IDF (Term Frequency–Inverse Document Frequency).
+
+### 3. TF-IDF Text Representation
+
+The job description and candidate resumes are converted into numerical representations using **TF-IDF (Term Frequency-Inverse Document Frequency)**.
+
 TF-IDF helps identify the importance of words within the job description and candidate resumes.
-4. Cosine Similarity
+
+### 4. Cosine Similarity
+
 Cosine similarity is used to compare the job description with each candidate resume.
+
 A higher similarity indicates greater textual overlap between the candidate's resume and the job description.
-5. Candidate Ranking
-The system combines text similarity information with skill matching to generate a final candidate score.
+
+### 5. Candidate Ranking
+
+The system combines:
+
+- Text similarity
+- Skill matching
+
+to generate an overall candidate score.
+
 Candidates are then sorted according to their calculated scores.
-📊 Candidate Analysis
+
+---
+
+## 📊 Candidate Analysis
+
 For each candidate, the application provides information such as:
-Metric	Description
-Final Score	Overall screening score
-Text Similarity	Similarity between the job description and resume
-Skill Match	Percentage of identified relevant skills
-Matched Skills	Relevant skills found in the candidate resume
-Missing Skills	Relevant skills not found in the candidate resume
 
+| Metric | Description |
+|---|---|
+| Final Score | Overall screening score |
+| Text Similarity | Similarity between the job description and resume |
+| Skill Match | Percentage of identified relevant skills |
+| Matched Skills | Relevant skills found in the candidate resume |
+| Missing Skills | Relevant skills not found in the candidate resume |
 
-Users can inspect individual candidates through the Candidate Details page.
-🖥️ Application Pages
-🔹 Screening
+Users can inspect individual candidates through the **Candidate Details** page.
+
+---
+
+## 🖥️ Application Pages
+
+### 💠 Screening
+
 The main screening page provides separate sections for:
+
 - Job Description
 - Candidate Resumes
 - Skill Configuration
-- Candidate Ranking
-Users can upload the required files and configure the screening criteria before starting the ranking process.
-🔹 Ranked Candidates
-The Ranked Candidates page displays the screening results.
-It provides:
+- Screening Controls
+
+Users can upload the required files and start the screening process.
+
+### 📈 Ranked Candidates
+
+Displays candidates according to their calculated screening scores.
+
+The page provides an overview of:
+
 - Candidate ranking
-- Final scores
+- Final score
 - Text similarity
 - Skill match
-- Score visualization
-- CSV export
-🔹 Candidate Details
-The Candidate Details page provides a detailed analysis of an individual candidate.
-It includes:
+
+### 👤 Candidate Details
+
+Provides detailed information about an individual candidate, including:
+
+- Candidate name
 - Final score
 - Text similarity
 - Skill match
 - Matched skills
 - Missing skills
-- Original uploaded resume preview
-- Extracted resume information
-📂 Project Structure
+- Resume preview
+
+---
+
+## 📂 Project Structure
+
+```text
 ai-resume-screening-system/
 │
 ├── app.py
@@ -156,136 +180,205 @@ ai-resume-screening-system/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+```
 
-🛠️ Technology Stack
-Technology	Purpose
-Python	Core programming language
-Streamlit	Interactive web application
-Scikit-learn	TF-IDF and cosine similarity
-Pandas	Data processing and result handling
-NumPy	Numerical operations
-PyPDF	PDF text extraction
-docx2txt	DOCX text extraction
-HTML/CSS	User interface customization
-Git	Version control
-GitHub	Source code hosting
+---
 
+## 🛠️ Technology Stack
 
-🚀 Installation
-1. Clone the repository
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| Streamlit | Interactive web application |
+| Scikit-learn | TF-IDF and cosine similarity |
+| Pandas | Data processing |
+| NumPy | Numerical operations |
+| PyPDF | PDF text extraction |
+| docx2txt | DOCX text extraction |
+| HTML/CSS | UI customization |
+| Git | Version control |
+| GitHub | Source code hosting |
+
+---
+
+## 🚀 Installation
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/Manasvi1406/ai-resume-screening-system.git
+```
 
-2. Navigate to the project
+### 2. Open the Project Directory
+
+```bash
 cd ai-resume-screening-system
+```
 
-3. Create a virtual environment
+### 3. Create a Virtual Environment
+
+#### Windows
+
+```bash
 python -m venv venv
+```
 
-4. Activate the virtual environment
-Windows
+Activate it:
+
+```bash
 venv\Scripts\activate
+```
 
-Linux / WSL / macOS
+#### Linux / WSL / macOS
+
+```bash
+python3 -m venv venv
+```
+
+Activate it:
+
+```bash
 source venv/bin/activate
+```
 
-5. Install dependencies
+### 4. Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-▶️ Run the Application
-Start the Streamlit application:
+---
+
+## ▶️ Run the Application
+
+Start the Streamlit application using:
+
+```bash
 streamlit run app.py
+```
 
 The application will normally be available at:
+
+```text
 http://localhost:8501
+```
 
-Open the address in your browser.
-🧪 Try the Sample Data
-The repository contains sample data that can be used to test the application.
-Job Description
+Open the address in your web browser.
+
+---
+
+## 🧪 Try the Sample Data
+
+Sample files are included in the repository.
+
+### Job Description
+
+```text
 sample_data/job_description.txt
+```
 
-Sample Resumes
-sample_data/resumes/
-├── Aisha Khan.txt
-├── Emily Chen.txt
-└── Rohan Verma.txt
+### Sample Resumes
 
-Basic Workflow
-1. Start the application.
-2. Upload or enter the job description.
-3. Upload the candidate resumes.
-4. Configure the required skills.
-5. Run the candidate ranking.
-6. Open Ranked Candidates.
-7. Select a candidate to view detailed results.
-8. Export the ranking as CSV if required.
-⚙️ Customization
-Add or Modify Skills
-The skills taxonomy can be modified in:
-resume_screener/skills.py
+```text
+sample_data/resumes/Aisha Khan.txt
+sample_data/resumes/Emily Chen.txt
+sample_data/resumes/Rohan Verma.txt
+```
 
-Modify Ranking Logic
-The candidate ranking logic is implemented in:
-resume_screener/ranker.py
+You can use these files to test the screening system without creating your own data first.
 
-Modify Resume Extraction
-Resume file processing is handled in:
-resume_screener/extractor.py
+---
 
-Customize the Interface
-The Streamlit application and visual styling are primarily handled in:
-app.py
+## ⚙️ Customization
 
-🎯 Project Objectives
-This project demonstrates the practical application of:
+The system can be customized through the main project modules.
+
+### `skills.py`
+
+Used for managing the skills taxonomy and skill matching.
+
+### `ranker.py`
+
+Contains the candidate ranking and similarity calculation logic.
+
+### `extractor.py`
+
+Handles text extraction from supported resume formats.
+
+### `app.py`
+
+Contains the Streamlit application interface and application workflow.
+
+---
+
+## 🎯 Project Objectives
+
+The project demonstrates the practical application of:
+
 - Natural Language Processing
-- TF-IDF vectorization
+- TF-IDF text representation
 - Cosine similarity
 - Skill extraction
 - Text processing
 - Information extraction
 - Data processing
 - Candidate ranking
-- Interactive dashboard development
 - Python application development
-🔮 Future Improvements
-Potential future improvements include:
-- 🤗 Transformer-based semantic embeddings
-- 🧠 Advanced NLP models
-- 📄 Additional resume formats
-- 🗃️ Candidate database integration
-- 🔐 User authentication
-- ☁️ Cloud deployment
-- 📊 Advanced recruitment analytics
-- 📧 Automated candidate communication
-- ⚖️ Configurable scoring weights
-- 📈 Candidate history and analytics
-- 🔎 More advanced contextual skill matching
-⚠️ Limitations
-This project is designed as a resume screening assistance and portfolio demonstration system.
-The candidate ranking is based primarily on textual similarity and identified skills. Therefore, the generated ranking should be treated as a screening aid rather than the sole basis for employment decisions.
-📌 Sample Project Output
-The application generates a candidate ranking containing information such as:
-Candidate
-Final Score
-Text Similarity
-Skill Match
-Matched Skills
-Missing Skills
+- Interactive dashboard development
 
-Users can also inspect individual candidates and view their uploaded resumes through the Candidate Details page.
-👨‍💻 Author
-Manasvi Sharma
+---
+
+## 🔮 Future Improvements
+
+Possible future enhancements include:
+
+- Transformer-based text embeddings
+- Advanced NLP techniques
+- Additional resume file formats
+- Database integration
+- User authentication
+- Cloud deployment
+- Advanced analytics dashboard
+- Configurable scoring weights
+- Screening history
+- Improved contextual skill matching
+- Automated candidate communication
+
+---
+
+## ⚠️ Limitations
+
+This project is designed as an **AI-assisted resume screening and portfolio application**.
+
+Candidate ranking is based primarily on textual similarity and identified skills. Therefore, the generated ranking should be treated as a screening aid rather than the sole basis for employment decisions.
+
+---
+
+## 👨‍💻 Author
+
+**Manasvi Sharma**
+
 B.Tech — Robotics & Automation
-Areas of Interest
+
+### Areas of Interest
+
 - Artificial Intelligence
 - Machine Learning
 - Data Science
 - Python
 - Software Development
 - Robotics & Automation
-🔗 GitHub Repository
-AI Resume Screening System
+
+---
+
+## 🔗 GitHub
+
+Repository:
+
 https://github.com/Manasvi1406/ai-resume-screening-system
-📄 License
-This project is available under the MIT License.
+
+---
+
+## 📄 License
+
+This project is released under the **MIT License**.
