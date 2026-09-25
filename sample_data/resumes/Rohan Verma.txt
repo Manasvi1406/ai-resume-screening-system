@@ -1,0 +1,16 @@
+Rohan Verma
+Email: rohan.verma@example.com | Phone: 555-0110
+
+Summary:
+Backend software engineer with 3 years of experience in Java and SQL,
+recently transitioning toward Data Science and Python development.
+
+Experience:
+- Built REST APIs using Java and Spring Boot for e-commerce platforms.
+- Managed relational databases with SQL and optimized query performance.
+- Completed coursework and personal projects in Python and Machine Learning,
+  including a basic Scikit-Learn classification model.
+- Familiar with Git for version control and basic Docker usage.
+
+Skills: Java, SQL, REST API, Git, Docker, Python, Machine Learning (beginner),
+Scikit-Learn (beginner)

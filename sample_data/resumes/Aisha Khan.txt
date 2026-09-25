@@ -1,0 +1,19 @@
+Aisha Khan
+Email: aisha.khan@example.com | Phone: 555-0102
+
+Summary:
+Data Scientist with 4 years of experience building Machine Learning and NLP
+systems in Python. Skilled in Scikit-Learn, Pandas, and TensorFlow, with a
+track record of shipping models into production using Docker and REST API.
+
+Experience:
+- Built an NLP pipeline for resume and job-description matching using TF-IDF
+  and cosine similarity, improving screening efficiency by 40%.
+- Developed Machine Learning classification models with Scikit-Learn and
+  TensorFlow for customer churn prediction.
+- Analyzed large datasets with Pandas and SQL to generate business insights.
+- Built interactive dashboards with Streamlit for internal stakeholders.
+- Deployed models to AWS using Docker containers and a REST API.
+
+Skills: Python, Machine Learning, NLP, Data Science, Scikit-Learn, Pandas,
+TensorFlow, SQL, Docker, AWS, Git, Statistics, Streamlit

@@ -1,0 +1,21 @@
+Job Title: Data Scientist (NLP Focus)
+
+We are looking for a Data Scientist with strong Python skills to join our AI team.
+The ideal candidate has hands-on experience with Machine Learning, Natural Language
+Processing, and Data Science workflows, and is comfortable building and deploying
+models end to end.
+
+Key Responsibilities:
+- Build and maintain NLP pipelines for text classification and information extraction
+- Apply TF-IDF, cosine similarity, and embedding-based methods for text ranking
+- Develop and evaluate Machine Learning models using Scikit-Learn and TensorFlow
+- Analyze large datasets using Pandas and NumPy
+- Build interactive dashboards using Streamlit to present model results
+- Collaborate with engineering to deploy models via REST API and Docker
+
+Required Skills:
+Python, Machine Learning, NLP, Data Science, Scikit-Learn, Pandas, SQL,
+TensorFlow, Statistics, Git, Docker
+
+Nice to Have:
+AWS, Flask, Data Visualization, Deep Learning

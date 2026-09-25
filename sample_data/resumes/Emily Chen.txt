@@ -1,0 +1,15 @@
+Emily Chen
+Email: emily.chen@example.com | Phone: 555-0123
+
+Summary:
+Marketing coordinator with 5 years of experience in digital campaigns,
+content strategy, and social media management.
+
+Experience:
+- Led digital marketing campaigns across social media and email channels.
+- Used Excel and Tableau for basic reporting and data visualization.
+- Managed project timelines and cross-functional communication.
+- Some exposure to Python for automating simple reporting scripts.
+
+Skills: Communication, Project Management, Excel, Tableau, Data Visualization,
+Leadership, Python (basic)
